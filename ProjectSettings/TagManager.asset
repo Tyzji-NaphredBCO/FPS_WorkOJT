@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Target
+  - Green
+  - Yellow
+  - Red
+  - Violet
+  - Blue
   layers:
   - Default
   - TransparentFX

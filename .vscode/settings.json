@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "OJT_Work1_FPS.sln"
+    "dotnet.defaultSolution": "FPS_WorkOJT.sln"
 }

@@ -10,6 +10,8 @@ public class ScoreSystem : MonoBehaviour
     public TextMeshProUGUI scoreText;
     private int score = 0; // Initialize score to 0
 
+    public GameObject Victory;
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Target"))
@@ -20,7 +22,11 @@ public class ScoreSystem : MonoBehaviour
             int score = int.Parse(pointString.Replace("Score: ", ""));
             score+= point;
             scoreText.text = "Score: " + score.ToString();
-             
+        
+        if (score >= 14) {
+            Cursor.lockState = CursorLockMode.None;
+            Victory.SetActive(true);
+        }
 
 
         }

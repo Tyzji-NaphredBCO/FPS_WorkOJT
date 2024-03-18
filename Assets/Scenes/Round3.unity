@@ -4350,6 +4350,8 @@ MonoBehaviour:
   bulletSpawn: {fileID: 95691525}
   bulletVelocity: 30
   bulletPrefabLifeTime: 3
+  bulletText: {fileID: 0}
+  gameOver: {fileID: 0}
 --- !u!65 &609078852
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10372,14 +10374,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484506336}
-  m_LocalRotation: {x: -0, y: -0, z: -0.10254904, w: 0.99472797}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0030343332, w: 0.99999547}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 521287090}
   m_Father: {fileID: 215904446}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -11.772}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.348}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -12612,6 +12614,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
+  bullet: 0
 --- !u!1001 &1853134047
 PrefabInstance:
   m_ObjectHideFlags: 0

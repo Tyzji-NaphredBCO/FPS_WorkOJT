@@ -33,7 +33,7 @@ public class Weapon : MonoBehaviour
                 bullet--; // Decrease bullet count
                 FireWeapon();
                 UpdateBulletText(); // Update UI text
-                 PlayShootingSound();
+                PlayShootingSound();
             }
             else
             {
@@ -46,7 +46,7 @@ public class Weapon : MonoBehaviour
 
     private void FireWeapon()
     {
-          // Instantiate the bullet
+        // Instantiate the bullet
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
         // Shoot the bullet
         bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward.normalized * bulletVelocity, ForceMode.Impulse);

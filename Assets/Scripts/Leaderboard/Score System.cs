@@ -7,10 +7,17 @@ using TMPro;
 public class ScoreSystem : MonoBehaviour
 {
     public int point;
-    public TextMeshProUGUI scoreText;
+    private TextMeshProUGUI scoreText;
     private int score = 0; // Initialize score to 0
 
-    public GameObject Victory;
+    private GameObject Victory;
+
+    private void Start()
+    {
+        scoreText = GameObject.Find("scoreText").GetComponent<TextMeshProUGUI>();
+        Victory = GameObject.Find("Victory");
+
+    }
 
     void OnCollisionEnter(Collision collision)
     {

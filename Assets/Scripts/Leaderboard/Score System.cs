@@ -8,7 +8,8 @@ public class ScoreSystem : MonoBehaviour
 {
     public int point;
     private TextMeshProUGUI scoreText;
-    private int score = 0; // Initialize score to 0
+    private int score = -1; // Initialize score to 0
+    public int winScoreCondition;
 
     private GameObject Victory;
 
@@ -29,13 +30,12 @@ public class ScoreSystem : MonoBehaviour
             int score = int.Parse(pointString.Replace("Score: ", ""));
             score+= point;
             scoreText.text = "Score: " + score.ToString();
-        
-        if (score >= 14) {
-            Cursor.lockState = CursorLockMode.None;
+        if (score >= winScoreCondition) {
+            Debug.Log(Victory);
             Victory.SetActive(true);
-        }
-
-
+            Cursor.lockState = CursorLockMode.None;
+        }else
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }

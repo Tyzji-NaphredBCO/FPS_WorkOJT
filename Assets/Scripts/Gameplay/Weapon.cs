@@ -13,7 +13,7 @@ public class Weapon : MonoBehaviour
     public GameObject gameOver;
     public AudioSource shootingSound;
     public AudioClip shootingClip;
-    private int bullet = 25; // Assuming you start with 10 bullets
+    public int bullet; // Assuming you start with 10 bullets
 
     // Start is called before the first frame update
     void Start()

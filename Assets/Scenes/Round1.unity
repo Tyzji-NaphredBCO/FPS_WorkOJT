@@ -3246,6 +3246,8 @@ MonoBehaviour:
   bulletPrefabLifeTime: 3
   bulletText: {fileID: 1412522526}
   gameOver: {fileID: 1968272297}
+  shootingSound: {fileID: 0}
+  shootingClip: {fileID: 8300000, guid: 9c08225404373fa48a940e8b0565e8ca, type: 3}
 --- !u!65 &609078852
 BoxCollider:
   m_ObjectHideFlags: 0

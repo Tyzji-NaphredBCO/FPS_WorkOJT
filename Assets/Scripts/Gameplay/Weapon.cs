@@ -11,12 +11,14 @@ public class Weapon : MonoBehaviour
     public Text bulletText; // Change to Text
 
     public GameObject gameOver;
-
+    public AudioSource shootingSound;
+    public AudioClip shootingClip;
     private int bullet = 25; // Assuming you start with 10 bullets
 
     // Start is called before the first frame update
     void Start()
     {
+        shootingSound.clip = shootingClip;
         UpdateBulletText();
     }
 
@@ -31,6 +33,7 @@ public class Weapon : MonoBehaviour
                 bullet--; // Decrease bullet count
                 FireWeapon();
                 UpdateBulletText(); // Update UI text
+                 PlayShootingSound();
             }
             else
             {
@@ -64,4 +67,11 @@ public class Weapon : MonoBehaviour
             bulletText.text = "Bullets: " + bullet.ToString();
         }
     }
+     private void PlayShootingSound()
+    {
+        if (shootingSound != null)
+        {
+            shootingSound.Play();
+        }
+}
 }

@@ -1,6 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
@@ -8,12 +8,16 @@ public class Weapon : MonoBehaviour
     public Transform bulletSpawn;
     public float bulletVelocity = 30;
     public float bulletPrefabLifeTime = 3f;
+    public Text bulletText; // Change to Text
 
+    public GameObject gameOver;
+
+    private int bullet = 25; // Assuming you start with 10 bullets
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        UpdateBulletText();
     }
 
     // Update is called once per frame
@@ -22,13 +26,24 @@ public class Weapon : MonoBehaviour
         // Left mouse click
         if(Input.GetKeyDown(KeyCode.Mouse0))
         {
-            FireWeapon();
+            if (bullet > 0) // Check if there are bullets available
+            {
+                bullet--; // Decrease bullet count
+                FireWeapon();
+                UpdateBulletText(); // Update UI text
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
+                gameOver.SetActive(true);
+                Debug.Log("Out of bullets!"); // Optionally handle out of bullets case
+            }
         }
     }
 
     private void FireWeapon()
     {
-        // Instantiate the bullet
+          // Instantiate the bullet
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
         // Shoot the bullet
         bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward.normalized * bulletVelocity, ForceMode.Impulse);
@@ -40,5 +55,13 @@ public class Weapon : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         Destroy(bullet);
+    }
+
+    private void UpdateBulletText()
+    {
+        if (bulletText != null)
+        {
+            bulletText.text = "Bullets: " + bullet.ToString();
+        }
     }
 }

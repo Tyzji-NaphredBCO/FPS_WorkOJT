@@ -1905,6 +1905,7 @@ MonoBehaviour:
   gameOver: {fileID: 1968272297}
   shootingSound: {fileID: 844813336}
   shootingClip: {fileID: 8300000, guid: 9c08225404373fa48a940e8b0565e8ca, type: 3}
+  bullet: 100
 --- !u!65 &609078852
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2681,11 +2682,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1033231268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d815e04b7d4f1d43bc088b990bcb054, type: 3}
+  m_Script: {fileID: 11500000, guid: 2127c8bcc6b915a4a80979ed990e2b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  point: 0
-  winScoreCondition: 25
+  scoreText: {fileID: 1558650188}
+  Victory: {fileID: 70735164}
+  winScoreCondition: 45
 --- !u!1 &1279960730
 GameObject:
   m_ObjectHideFlags: 0

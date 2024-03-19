@@ -1095,7 +1095,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 3
-  winScoreCondition: 0
 --- !u!114 &325490382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2001,7 +2000,7 @@ MonoBehaviour:
   gameOver: {fileID: 1968272297}
   shootingSound: {fileID: 437000584}
   shootingClip: {fileID: 8300000, guid: 9c08225404373fa48a940e8b0565e8ca, type: 3}
-  bullet: 0
+  bullet: 200
 --- !u!65 &609078852
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2348,7 +2347,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 2
-  winScoreCondition: 0
 --- !u!114 &855960285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2545,7 +2543,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 1
-  winScoreCondition: 0
 --- !u!114 &979911258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2911,11 +2908,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1033231268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d815e04b7d4f1d43bc088b990bcb054, type: 3}
+  m_Script: {fileID: 11500000, guid: 2127c8bcc6b915a4a80979ed990e2b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  point: 0
-  winScoreCondition: 60
+  scoreText: {fileID: 1558650188}
+  Victory: {fileID: 70735164}
+  winScoreCondition: 150
 --- !u!1 &1091094234
 GameObject:
   m_ObjectHideFlags: 0
@@ -4426,7 +4424,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 4
-  winScoreCondition: 0
 --- !u!114 &1720044867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4849,7 +4846,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 5
-  winScoreCondition: 0
 --- !u!114 &1744008591
 MonoBehaviour:
   m_ObjectHideFlags: 0
